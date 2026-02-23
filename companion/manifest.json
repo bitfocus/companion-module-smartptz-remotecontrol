@@ -1,5 +1,5 @@
 {
-	"id": "companion-module-smartptz-remotecontrol",
+	"id": "smartptz-remotecontrol",
 	"name": "Smart PTZ Module",
 	"shortname": "smartptz-module",
 	"description": "Our bitfocus module",
