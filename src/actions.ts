@@ -1,5 +1,20 @@
-
-import { changeExposure, changePtSensitivity, changeTint, changeWB, changeZoom, changeZoomSensitivity, executePreset, moveDock, releaseDock, releaseZoom, setZoom, toggleAutoWB, toggleRecord, toggleSmartStation, toggleStream } from './firebase.js'
+import {
+	changeExposure,
+	changePtSensitivity,
+	changeTint,
+	changeWB,
+	changeZoom,
+	changeZoomSensitivity,
+	executePreset,
+	moveDock,
+	releaseDock,
+	releaseZoom,
+	setZoom,
+	toggleAutoWB,
+	toggleRecord,
+	toggleSmartStation,
+	toggleStream,
+} from './firebase.js'
 import type { ModuleInstance } from './main.js'
 
 export function UpdateActions(self: ModuleInstance): void {
@@ -9,12 +24,11 @@ export function UpdateActions(self: ModuleInstance): void {
 			options: [],
 			callback: async () => {
 				toggleRecord()
-				let record = self.getVariableValue("record")
-				if( record?.valueOf() == true){
-					self.setVariableValues({ "record": false })
-				}
-				else{
-					self.setVariableValues({ "record": true })
+				const record = self.getVariableValue('record')
+				if (record?.valueOf() == true) {
+					self.setVariableValues({ record: false })
+				} else {
+					self.setVariableValues({ record: true })
 				}
 			},
 		},
@@ -23,12 +37,11 @@ export function UpdateActions(self: ModuleInstance): void {
 			options: [],
 			callback: async () => {
 				toggleStream(self)
-				let stream = self.getVariableValue("stream")
-				if( stream?.valueOf() == true){
-					self.setVariableValues({ "stream": false })
-				}
-				else{
-					self.setVariableValues({ "stream": true })
+				const stream = self.getVariableValue('stream')
+				if (stream?.valueOf() == true) {
+					self.setVariableValues({ stream: false })
+				} else {
+					self.setVariableValues({ stream: true })
 				}
 			},
 		},
@@ -37,12 +50,11 @@ export function UpdateActions(self: ModuleInstance): void {
 			options: [],
 			callback: async () => {
 				toggleAutoWB(self)
-				let stream = self.getVariableValue("autoWB")
-				if( stream?.valueOf() == true){
-					self.setVariableValues({ "autoWB": false })
-				}
-				else{
-					self.setVariableValues({ "autoWB": true })
+				const stream = self.getVariableValue('autoWB')
+				if (stream?.valueOf() == true) {
+					self.setVariableValues({ autoWB: false })
+				} else {
+					self.setVariableValues({ autoWB: true })
 				}
 			},
 		},
@@ -89,256 +101,256 @@ export function UpdateActions(self: ModuleInstance): void {
 			},
 		},
 		call_preset_1: {
-			name: "call_preset_1",
+			name: 'call_preset_1',
 			options: [],
 			callback: async () => {
-				executePreset("callPreset1")
-			}
+				executePreset('callPreset1')
+			},
 		},
 		set_preset_1: {
-			name: "set_preset_1",
+			name: 'set_preset_1',
 			options: [],
 			callback: async () => {
-				executePreset("setPreset1")
-			}
+				executePreset('setPreset1')
+			},
 		},
 		call_preset_2: {
-			name: "call_preset_2",
+			name: 'call_preset_2',
 			options: [],
 			callback: async () => {
-				executePreset("callPreset2")
-			}
+				executePreset('callPreset2')
+			},
 		},
 		set_preset_2: {
-			name: "set_preset_2",
+			name: 'set_preset_2',
 			options: [],
 			callback: async () => {
-				executePreset("setPreset2")
-			}
+				executePreset('setPreset2')
+			},
 		},
 		call_preset_3: {
-			name: "call_preset_3",
+			name: 'call_preset_3',
 			options: [],
 			callback: async () => {
-				executePreset("callPreset3")
-			}
+				executePreset('callPreset3')
+			},
 		},
 		set_preset_3: {
-			name: "set_preset_3",
+			name: 'set_preset_3',
 			options: [],
 			callback: async () => {
-				executePreset("setPreset3")
-			}
+				executePreset('setPreset3')
+			},
 		},
 		call_preset_4: {
-			name: "call_preset_4",
+			name: 'call_preset_4',
 			options: [],
 			callback: async () => {
-				executePreset("callPreset4")
-			}
+				executePreset('callPreset4')
+			},
 		},
 		set_preset_4: {
-			name: "set_preset_4",
+			name: 'set_preset_4',
 			options: [],
 			callback: async () => {
-				executePreset("setPreset4")
-			}
+				executePreset('setPreset4')
+			},
 		},
 		call_preset_5: {
-			name: "call_preset_5",
+			name: 'call_preset_5',
 			options: [],
 			callback: async () => {
-				executePreset("callPreset5")
-			}
+				executePreset('callPreset5')
+			},
 		},
 		set_preset_5: {
-			name: "set_preset_5",
+			name: 'set_preset_5',
 			options: [],
 			callback: async () => {
-				executePreset("setPreset5")
-			}
+				executePreset('setPreset5')
+			},
 		},
 		call_preset_6: {
-			name: "call_preset_6",
+			name: 'call_preset_6',
 			options: [],
 			callback: async () => {
-				executePreset("callPreset6")
-			}
+				executePreset('callPreset6')
+			},
 		},
 		set_preset_6: {
-			name: "set_preset_6",
+			name: 'set_preset_6',
 			options: [],
 			callback: async () => {
-				executePreset("setPreset6")
-			}
+				executePreset('setPreset6')
+			},
 		},
 		zoom_faster: {
-			name: "Zoom Faster",
+			name: 'Zoom Faster',
 			options: [],
 			callback: async () => {
 				changeZoomSensitivity(true)
-			}
+			},
 		},
 		zoom_slower: {
-			name: "Zoom Slower",
+			name: 'Zoom Slower',
 			options: [],
 			callback: async () => {
 				changeZoomSensitivity(false)
-			}
+			},
 		},
 		zoom_in: {
-			name: "Zoom In",
+			name: 'Zoom In',
 			options: [],
 			callback: async () => {
 				changeZoom(true)
-			}
+			},
 		},
 		zoom_out: {
-			name: "Zoom Out",
+			name: 'Zoom Out',
 			options: [],
 			callback: async () => {
 				changeZoom(false)
-			}
+			},
 		},
 		zoom_in_release: {
-			name: "Zoom In release",
+			name: 'Zoom In release',
 			options: [],
 			callback: async () => {
 				releaseZoom(true)
-			}
+			},
 		},
 		zoom_out_release: {
-			name: "Zoom Out release",
+			name: 'Zoom Out release',
 			options: [],
 			callback: async () => {
 				releaseZoom(true)
-			}
+			},
 		},
 		pt_faster: {
-			name: "Pt Faster",
+			name: 'Pt Faster',
 			options: [],
 			callback: async () => {
 				changePtSensitivity(true)
-			}
+			},
 		},
 		pt_slower: {
-			name: "Pt Slower",
+			name: 'Pt Slower',
 			options: [],
 			callback: async () => {
 				changePtSensitivity(false)
-			}
+			},
 		},
 		release_dock: {
-			name: "Move Left",
+			name: 'Move Left',
 			options: [],
 			callback: async () => {
-				releaseDock("left")
-			}
+				releaseDock('left')
+			},
 		},
 		move_left: {
-			name: "Move Left",
+			name: 'Move Left',
 			options: [],
 			callback: async () => {
-				moveDock("left")
-			}
+				moveDock('left')
+			},
 		},
 		move_left_up: {
-			name: "Move Left Up",
+			name: 'Move Left Up',
 			options: [],
 			callback: async () => {
-				moveDock("leftUp")
-			}
+				moveDock('leftUp')
+			},
 		},
 		move_left_down: {
-			name: "Move Left Down",
+			name: 'Move Left Down',
 			options: [],
 			callback: async () => {
-				moveDock("leftDown")
-			}
+				moveDock('leftDown')
+			},
 		},
 		move_right: {
-			name: "Move Right",
+			name: 'Move Right',
 			options: [],
 			callback: async () => {
-				moveDock("right")
-			}
+				moveDock('right')
+			},
 		},
 		move_right_up: {
-			name: "Move Right Up",
+			name: 'Move Right Up',
 			options: [],
 			callback: async () => {
-				moveDock("rightUp")
-			}
+				moveDock('rightUp')
+			},
 		},
 		move_right_down: {
-			name: "Move Right Down",
+			name: 'Move Right Down',
 			options: [],
 			callback: async () => {
-				moveDock("rightDown")
-			}
+				moveDock('rightDown')
+			},
 		},
 		move_up: {
-			name: "Move Up",
+			name: 'Move Up',
 			options: [],
 			callback: async () => {
-				moveDock("up")
-			}
+				moveDock('up')
+			},
 		},
 		move_down: {
-			name: "Move Down",
+			name: 'Move Down',
 			options: [],
 			callback: async () => {
-				moveDock("down")
-			}
+				moveDock('down')
+			},
 		},
 		smart_station: {
-			name: "Smart Station",
+			name: 'Smart Station',
 			options: [],
 			callback: async () => {
 				toggleSmartStation()
-			}
+			},
 		},
 		set_zoom_x1w: {
-			name: "Set Zoom x1W",
+			name: 'Set Zoom x1W',
 			options: [],
 			callback: async () => {
-				setZoom(self, "x1W")
-			}
+				setZoom(self, 'x1W')
+			},
 		},
 		set_zoom_x2w: {
-			name: "Set Zoom x2W",
+			name: 'Set Zoom x2W',
 			options: [],
 			callback: async () => {
-				setZoom(self, "x2W")
-			}
+				setZoom(self, 'x2W')
+			},
 		},
 		set_zoom_x3w: {
-			name: "Set Zoom x3W",
+			name: 'Set Zoom x3W',
 			options: [],
 			callback: async () => {
-				setZoom(self, "x3W")
-			}
+				setZoom(self, 'x3W')
+			},
 		},
 		set_zoom_x1t: {
-			name: "Set Zoom x1T",
+			name: 'Set Zoom x1T',
 			options: [],
 			callback: async () => {
-				setZoom(self, "x1T")
-			}
+				setZoom(self, 'x1T')
+			},
 		},
 		set_zoom_x2t: {
-			name: "Set Zoom x2T",
+			name: 'Set Zoom x2T',
 			options: [],
 			callback: async () => {
-				setZoom(self, "x2T")
-			}
+				setZoom(self, 'x2T')
+			},
 		},
 		set_zoom_x3t: {
-			name: "Set Zoom x3T",
+			name: 'Set Zoom x3T',
 			options: [],
 			callback: async () => {
-				setZoom(self, "x3T")
-			}
-		}
+				setZoom(self, 'x3T')
+			},
+		},
 	})
 }

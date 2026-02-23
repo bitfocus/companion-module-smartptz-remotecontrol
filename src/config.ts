@@ -11,7 +11,7 @@ export function GetConfigFields(): SomeCompanionConfigField[] {
 			id: 'ptzId',
 			label: 'PTZ ID',
 			width: 4,
-			default: "",
+			default: '',
 		},
 	]
 }

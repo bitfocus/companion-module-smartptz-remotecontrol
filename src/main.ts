@@ -20,17 +20,13 @@ export class ModuleInstance extends InstanceBase<ModuleConfig> {
 	constructor(internal: unknown) {
 		super(internal)
 	}
-
 	async init(config: ModuleConfig): Promise<void> {
-		
 		this.config = config
-		
-		if(config.ptzId.length > 0){
-			this.setVariableValues({"ptzId": config.ptzId})
+		if (config.ptzId.length > 0) {
+			this.setVariableValues({ ptzId: config.ptzId })
 			startFirebase(this, config.ptzId)
 		}
 		this.updateStatus(InstanceStatus.Ok)
-
 		this.updateActions() // export actions
 		this.updateFeedbacks() // export feedbacks
 		this.updatePresets() // export Presets
@@ -40,10 +36,9 @@ export class ModuleInstance extends InstanceBase<ModuleConfig> {
 	async destroy(): Promise<void> {
 		this.log('debug', 'destroy')
 	}
-
 	async configUpdated(config: ModuleConfig): Promise<void> {
-		if(config.ptzId.length > 0){
-			this.setVariableValues({"ptzId": config.ptzId})
+		if (config.ptzId.length > 0) {
+			this.setVariableValues({ ptzId: config.ptzId })
 			startFirebase(this, config.ptzId)
 		}
 		this.config = config
