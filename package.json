@@ -1,6 +1,6 @@
 {
-	"name": "your-module-name",
-	"version": "0.1.0",
+	"name": "smartptz-remotecontrol",
+	"version": "1.1.0",
 	"main": "dist/main.js",
 	"type": "module",
 	"scripts": {
@@ -16,22 +16,27 @@
 	"license": "MIT",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/bitfocus/companion-module-your-module-name.git"
+		"url": "git+https://github.com/hanfordtroy/companion-module-smartPTZ-remotecontrol.git"
 	},
 	"engines": {
 		"node": "^22.20",
 		"yarn": "^4"
 	},
 	"dependencies": {
-		"@companion-module/base": "~1.14.1"
+		"@companion-module/base": "~1.14.1",
+		"dotenv": "^17.3.1",
+		"firebase-admin": "^13.4.0",
+		"ws": "^8.19.0"
 	},
 	"devDependencies": {
 		"@companion-module/tools": "^2.6.1",
 		"@types/node": "^22.19.3",
+		"@types/ws": "^8.18.1",
 		"eslint": "^9.39.2",
 		"husky": "^9.1.7",
 		"lint-staged": "^16.2.7",
 		"prettier": "^3.7.4",
+		"request": "^2.88.2",
 		"rimraf": "^6.1.2",
 		"typescript": "~5.9.3",
 		"typescript-eslint": "^8.51.0"
