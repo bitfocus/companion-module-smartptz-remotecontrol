@@ -113,7 +113,7 @@ export function UpdatePresets(self: ModuleInstance): void {
 			text: `Temp Down\n$(smartptz-module:camTemp)`,
 			size: '14',
 			color: combineRgb(255, 255, 255),
-			bgcolor: combineRgb(214, 48, 49),
+			bgcolor: combineRgb(255, 0, 0),
 			show_topbar: false,
 		},
 		steps: [
@@ -142,7 +142,7 @@ export function UpdatePresets(self: ModuleInstance): void {
 			text: `Temp Up\n$(smartptz-module:camTemp)`,
 			size: '14',
 			color: combineRgb(255, 255, 255),
-			bgcolor: combineRgb(214, 48, 49),
+			bgcolor: combineRgb(255, 0, 0),
 			show_topbar: false,
 		},
 		steps: [
@@ -172,7 +172,7 @@ export function UpdatePresets(self: ModuleInstance): void {
 			text: `Tint Down\n$(smartptz-module:camTint)`,
 			size: '14',
 			color: combineRgb(255, 255, 255),
-			bgcolor: combineRgb(214, 48, 49),
+			bgcolor: combineRgb(255, 0, 0),
 			show_topbar: false,
 		},
 		steps: [
@@ -201,7 +201,7 @@ export function UpdatePresets(self: ModuleInstance): void {
 			text: `Tint Up\n$(smartptz-module:camTint)`,
 			size: '14',
 			color: combineRgb(255, 255, 255),
-			bgcolor: combineRgb(214, 48, 49),
+			bgcolor: combineRgb(255, 0, 0),
 			show_topbar: false,
 		},
 		steps: [
@@ -875,7 +875,7 @@ export function UpdatePresets(self: ModuleInstance): void {
 		category: 'AI',
 		name: 'Name',
 		style: {
-			text: `Smart Station`,
+			text: `Smart Station [on/off]`,
 			size: '14',
 			color: combineRgb(255, 255, 255),
 			bgcolor: combineRgb(48, 54, 61),

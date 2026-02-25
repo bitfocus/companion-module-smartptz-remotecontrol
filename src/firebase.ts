@@ -6,8 +6,8 @@ let recordEnabled = false
 let camTemp = 4000
 let camTint = 0
 let camExposure = 0
-let zoom = 5
-let ptSensitivity = 5
+let zoom = 3
+let ptSensitivity = 3
 let isSmartStation = false
 let socket: WebSocket
 
@@ -63,8 +63,8 @@ function initialize(self: ModuleInstance) {
 
 			camTemp = controls.camTemp
 			camTint = controls.camTint
-			zoom = controls.zoom
-			ptSensitivity = controls.ptSensitivity
+			zoom = controls.zoom ?? 3
+			ptSensitivity = controls.ptSensitivity ?? 3
 			camExposure = controls.camExposure
 			self.isDockConnected = payload.isDockConnected
 			self.setVariableValues({
