@@ -63,10 +63,6 @@ export function UpdatePresets(self: ModuleInstance): void {
 			{
 				feedbackId: 'StreamState',
 				options: {},
-				style: {
-					bgcolor: combineRgb(255, 0, 0),
-					color: combineRgb(255, 255, 255),
-				},
 			},
 		],
 	}

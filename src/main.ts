@@ -9,7 +9,7 @@ import { startFirebase } from './firebase.js'
 
 export class ModuleInstance extends InstanceBase<ModuleConfig> {
 	config!: ModuleConfig // Setup in init()
-	isStreaming = false
+	isStreaming: string = 'disconnected'
 	isRecording = false
 	isDockConnected = false
 	phoneBattery = 0

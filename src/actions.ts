@@ -38,10 +38,10 @@ export function UpdateActions(self: ModuleInstance): void {
 			callback: async () => {
 				toggleStream(self)
 				const stream = self.getVariableValue('stream')
-				if (stream?.valueOf() == true) {
-					self.setVariableValues({ stream: false })
+				if (stream?.valueOf() == 'disconnected') {
+					self.setVariableValues({ stream: 'connecting' })
 				} else {
-					self.setVariableValues({ stream: true })
+					self.setVariableValues({ stream: 'disconnected' })
 				}
 			},
 		},

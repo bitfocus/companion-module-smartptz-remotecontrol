@@ -21,17 +21,27 @@ export function UpdateFeedbacks(self: ModuleInstance): void {
 		},
 		StreamState: {
 			name: 'Listen for stream',
-			type: 'boolean',
-			defaultStyle: {
-				bgcolor: combineRgb(255, 0, 0),
-				color: combineRgb(255, 255, 255),
-			},
+			type: 'advanced',
 			options: [],
 			callback: () => {
-				if (self.isStreaming) {
-					return true
-				} else {
-					return false
+				switch (self.getVariableValue('stream')) {
+					case 'connecting':
+						return {
+							bgcolor: combineRgb(255, 255, 0), // Yellow
+							color: combineRgb(255, 255, 255),
+						}
+
+					case 'running':
+						return {
+							bgcolor: combineRgb(255, 0, 0), // Orange
+							color: combineRgb(255, 255, 255),
+						}
+
+					default:
+						return {
+							bgcolor: combineRgb(0, 0, 0), // Black
+							color: combineRgb(255, 255, 255),
+						}
 				}
 			},
 		},

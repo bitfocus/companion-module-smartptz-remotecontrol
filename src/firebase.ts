@@ -98,13 +98,12 @@ export function toggleRecord(): void {
 }
 
 export function toggleStream(self: ModuleInstance): void {
-	const nextValue = !self.isStreaming
-	self.isStreaming = nextValue // optimistic local update
+	const nextValue = self.getVariableValue('stream') == 'disconnected' ? 'connecting' : 'disconnected'
 	socket.send(JSON.stringify({ ptzId: ptzId, value: nextValue, type: 'stream' }))
 }
 export function toggleAutoWB(self: ModuleInstance): void {
 	const nextValue = !self.autoWhiteBalance
-	self.autoWhiteBalance = nextValue // optimistic local update
+	self.autoWhiteBalance = nextValue
 	socket.send(JSON.stringify({ ptzId: ptzId, value: nextValue, type: 'toggleAutoWb' }))
 }
 
