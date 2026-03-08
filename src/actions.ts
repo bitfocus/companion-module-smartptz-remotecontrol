@@ -223,7 +223,7 @@ export function UpdateActions(self: ModuleInstance): void {
 			name: 'Zoom Out release',
 			options: [],
 			callback: async () => {
-				releaseZoom(true)
+				releaseZoom(false)
 			},
 		},
 		pt_faster: {

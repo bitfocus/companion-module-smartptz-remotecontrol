@@ -46,7 +46,6 @@ function initialize(self: ModuleInstance) {
 		} else if (Object.hasOwn(payload, 'stream')) {
 			const value = payload.stream
 			self.setVariableValues({ stream: value })
-			self.isStreaming = value
 			self.checkFeedbacks('StreamState')
 		} else if (Object.hasOwn(payload, 'smart_station')) {
 			const value = payload.smart_station
@@ -207,7 +206,7 @@ export function releaseZoom(increment: boolean): void {
 	if (increment) {
 		type = 'zoomIn'
 	}
-	socket.send(JSON.stringify({ ptzId: ptzId, op: type, type: 'releaseZoom' }))
+	socket.send(JSON.stringify({ ptzId: ptzId, op: type, type: 'releaseZoom', zoom: zoom / 10 }))
 }
 
 export function moveDock(type: string): void {
