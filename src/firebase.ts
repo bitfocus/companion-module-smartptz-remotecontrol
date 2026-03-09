@@ -85,6 +85,7 @@ function initialize(self: ModuleInstance) {
 				'ZoomSensitivityState',
 				'PtSensitivityState',
 				'DockState',
+				'PhoneBatteryState',
 			)
 		}
 	})

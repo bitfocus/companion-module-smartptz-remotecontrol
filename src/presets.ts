@@ -908,7 +908,7 @@ export function UpdatePresets(self: ModuleInstance): void {
 			text: `Dock Status\n[red=on]`,
 			size: '14',
 			color: combineRgb(255, 255, 255),
-			bgcolor: combineRgb(48, 54, 61),
+			bgcolor: combineRgb(0, 0, 0),
 			show_topbar: false,
 		},
 		steps: [],
@@ -935,7 +935,12 @@ export function UpdatePresets(self: ModuleInstance): void {
 			show_topbar: false,
 		},
 		steps: [],
-		feedbacks: [],
+		feedbacks: [
+			{
+				feedbackId: 'PhoneBatteryState',
+				options: {},
+			},
+		],
 	}
 
 	presets['setZoom'] = {

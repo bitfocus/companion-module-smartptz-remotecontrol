@@ -59,10 +59,25 @@ export function UpdateFeedbacks(self: ModuleInstance): void {
 		},
 		PhoneBatteryState: {
 			name: 'Listen for phone battery',
-			type: 'value',
+			type: 'advanced',
 			options: [],
 			callback: () => {
-				return self.phoneBattery
+				const phoneBattery = Number(self.getVariableValue('phoneBattery') ?? 0)
+				if (phoneBattery > 20) {
+					return {
+						bgcolor: combineRgb(255, 0, 0), // red
+						color: combineRgb(255, 255, 255),
+					}
+				} else if (phoneBattery < 20 && phoneBattery > 0) {
+					return {
+						bgcolor: combineRgb(255, 255, 0), // Yellow
+						color: combineRgb(255, 255, 255),
+					}
+				}
+				return {
+					bgcolor: combineRgb(0, 0, 0), // black
+					color: combineRgb(255, 255, 255),
+				}
 			},
 		},
 		AutoWBState: {

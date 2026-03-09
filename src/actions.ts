@@ -23,6 +23,10 @@ export function UpdateActions(self: ModuleInstance): void {
 			name: 'Start/Stop Recording',
 			options: [],
 			callback: async () => {
+				const batteryLevel = self.getVariableValue('phoneBattery')
+				if (batteryLevel == 0) {
+					return
+				}
 				toggleRecord()
 				const record = self.getVariableValue('record')
 				if (record?.valueOf() == true) {
@@ -36,8 +40,12 @@ export function UpdateActions(self: ModuleInstance): void {
 			name: 'Start/Stop Stream',
 			options: [],
 			callback: async () => {
-				toggleStream(self)
+				const batteryLevel = self.getVariableValue('phoneBattery')
+				if (batteryLevel == 0) {
+					return
+				}
 				const stream = self.getVariableValue('stream')
+				toggleStream(self)
 				if (stream?.valueOf() == 'disconnected') {
 					self.setVariableValues({ stream: 'connecting' })
 				} else {
