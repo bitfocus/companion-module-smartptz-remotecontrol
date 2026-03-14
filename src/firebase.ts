@@ -51,7 +51,7 @@ function initialize(self: ModuleInstance) {
 			const value = payload.smart_station
 			isSmartStation = value
 			self.isSmartStation = value
-			self.checkFeedbacks('SmartStationState')
+			self.checkFeedbacks('SmartStationState', 'PresetState')
 		} else if (Object.hasOwn(payload, 'cameraControls')) {
 			const controls = payload.cameraControls
 

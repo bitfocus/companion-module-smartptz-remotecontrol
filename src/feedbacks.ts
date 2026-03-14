@@ -68,9 +68,9 @@ export function UpdateFeedbacks(self: ModuleInstance): void {
 						bgcolor: combineRgb(255, 0, 0), // red
 						color: combineRgb(255, 255, 255),
 					}
-				} else if (phoneBattery < 20 && phoneBattery > 0) {
+				} else if (phoneBattery <= 20 && phoneBattery > 0) {
 					return {
-						bgcolor: combineRgb(255, 255, 0), // Yellow
+						bgcolor: combineRgb(194, 194, 0), // Yellow
 						color: combineRgb(255, 255, 255),
 					}
 				}
@@ -141,6 +141,22 @@ export function UpdateFeedbacks(self: ModuleInstance): void {
 			type: 'boolean',
 			defaultStyle: {
 				bgcolor: combineRgb(255, 0, 0),
+				color: combineRgb(255, 255, 255),
+			},
+			options: [],
+			callback: () => {
+				if (self.isSmartStation) {
+					return true
+				} else {
+					return false
+				}
+			},
+		},
+		PresetState: {
+			name: 'Listen for preset state',
+			type: 'boolean',
+			defaultStyle: {
+				bgcolor: combineRgb(54, 169, 225),
 				color: combineRgb(255, 255, 255),
 			},
 			options: [],

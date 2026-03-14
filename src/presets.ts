@@ -69,7 +69,7 @@ export function UpdatePresets(self: ModuleInstance): void {
 
 	presets['auto_wb'] = {
 		type: 'button',
-		category: 'Camera Controls',
+		category: 'Camera Color Control',
 		name: 'Name',
 		style: {
 			text: 'Auto WB',
@@ -103,7 +103,7 @@ export function UpdatePresets(self: ModuleInstance): void {
 
 	presets['cam_temp_down'] = {
 		type: 'button',
-		category: 'Camera Controls',
+		category: 'Camera Color Control',
 		name: 'Name',
 		style: {
 			text: `Temp Down\n$(smartptz-module:camTemp)`,
@@ -132,7 +132,7 @@ export function UpdatePresets(self: ModuleInstance): void {
 	}
 	presets['cam_temp_up'] = {
 		type: 'button',
-		category: 'Camera Controls',
+		category: 'Camera Color Control',
 		name: 'Name',
 		style: {
 			text: `Temp Up\n$(smartptz-module:camTemp)`,
@@ -162,7 +162,7 @@ export function UpdatePresets(self: ModuleInstance): void {
 
 	presets['cam_tint_down'] = {
 		type: 'button',
-		category: 'Camera Controls',
+		category: 'Camera Color Control',
 		name: 'Name',
 		style: {
 			text: `Tint Down\n$(smartptz-module:camTint)`,
@@ -191,7 +191,7 @@ export function UpdatePresets(self: ModuleInstance): void {
 	}
 	presets['cam_tint_up'] = {
 		type: 'button',
-		category: 'Camera Controls',
+		category: 'Camera Color Control',
 		name: 'Name',
 		style: {
 			text: `Tint Up\n$(smartptz-module:camTint)`,
@@ -221,7 +221,7 @@ export function UpdatePresets(self: ModuleInstance): void {
 
 	presets['cam_exp_down'] = {
 		type: 'button',
-		category: 'Camera Controls',
+		category: 'Camera Color Control',
 		name: 'Name',
 		style: {
 			text: `Exp Down\n$(smartptz-module:camExp)`,
@@ -250,7 +250,7 @@ export function UpdatePresets(self: ModuleInstance): void {
 	}
 	presets['cam_exp_up'] = {
 		type: 'button',
-		category: 'Camera Controls',
+		category: 'Camera Color Control',
 		name: 'Name',
 		style: {
 			text: `Exp Up\n$(smartptz-module:camExp)`,
@@ -305,7 +305,16 @@ export function UpdatePresets(self: ModuleInstance): void {
 				],
 			},
 		],
-		feedbacks: [],
+		feedbacks: [
+			{
+				feedbackId: 'PresetState',
+				style: {
+					bgcolor: combineRgb(48, 54, 61),
+					color: combineRgb(255, 255, 255),
+				},
+				options: {},
+			},
+		],
 	}
 	presets['preset_2'] = {
 		type: 'button',
@@ -335,7 +344,16 @@ export function UpdatePresets(self: ModuleInstance): void {
 				],
 			},
 		],
-		feedbacks: [],
+		feedbacks: [
+			{
+				feedbackId: 'PresetState',
+				style: {
+					bgcolor: combineRgb(48, 54, 61),
+					color: combineRgb(255, 255, 255),
+				},
+				options: {},
+			},
+		],
 	}
 	presets['preset_3'] = {
 		type: 'button',
@@ -365,7 +383,16 @@ export function UpdatePresets(self: ModuleInstance): void {
 				],
 			},
 		],
-		feedbacks: [],
+		feedbacks: [
+			{
+				feedbackId: 'PresetState',
+				style: {
+					bgcolor: combineRgb(48, 54, 61),
+					color: combineRgb(255, 255, 255),
+				},
+				options: {},
+			},
+		],
 	}
 	presets['preset_4'] = {
 		type: 'button',
@@ -395,7 +422,16 @@ export function UpdatePresets(self: ModuleInstance): void {
 				],
 			},
 		],
-		feedbacks: [],
+		feedbacks: [
+			{
+				feedbackId: 'PresetState',
+				style: {
+					bgcolor: combineRgb(48, 54, 61),
+					color: combineRgb(255, 255, 255),
+				},
+				options: {},
+			},
+		],
 	}
 	presets['preset_5'] = {
 		type: 'button',
@@ -425,7 +461,16 @@ export function UpdatePresets(self: ModuleInstance): void {
 				],
 			},
 		],
-		feedbacks: [],
+		feedbacks: [
+			{
+				feedbackId: 'PresetState',
+				style: {
+					bgcolor: combineRgb(48, 54, 61),
+					color: combineRgb(255, 255, 255),
+				},
+				options: {},
+			},
+		],
 	}
 	presets['preset_6'] = {
 		type: 'button',
@@ -455,7 +500,16 @@ export function UpdatePresets(self: ModuleInstance): void {
 				],
 			},
 		],
-		feedbacks: [],
+		feedbacks: [
+			{
+				feedbackId: 'PresetState',
+				style: {
+					bgcolor: combineRgb(48, 54, 61),
+					color: combineRgb(255, 255, 255),
+				},
+				options: {},
+			},
+		],
 	}
 	presets['zoom_faster'] = {
 		type: 'button',
@@ -902,7 +956,7 @@ export function UpdatePresets(self: ModuleInstance): void {
 
 	presets['dockStatus'] = {
 		type: 'button',
-		category: 'Phone',
+		category: 'Phone and Dock Status',
 		name: 'Name',
 		style: {
 			text: `Dock Status\n[red=on]`,
@@ -925,7 +979,7 @@ export function UpdatePresets(self: ModuleInstance): void {
 	}
 	presets['phoneBattery'] = {
 		type: 'button',
-		category: 'Phone',
+		category: 'Phone and Dock Status',
 		name: 'Name',
 		style: {
 			text: `Phone Battery\n$(smartptz-module:phoneBattery)%`,
